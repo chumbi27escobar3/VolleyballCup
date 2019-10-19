@@ -10,76 +10,56 @@ public class InterfaceEvent {
 	private Scanner entry;
 	
 	public InterfaceEvent() {
-		entry =new Scanner(System.in);	
+		entry =new Scanner(System.in);
+		
 		event = new Event("");
 		
 	}
 		
 	public void showSelection() {
 			showMenu();
-			int option = entry.nextInt();
-			String path;
+			String option = entry.nextLine();
+			boolean oe = false;
 //			String id; //race, lastName, date, typePetsFavorate;
-			switch(option) {
+		while(!oe) {	
+			switch(Integer.parseInt(option)) {
 			case 1:
 			System.out.println("Porfavor digite la ruta absoluta en donde esta el archivo que sea cargar a la plataforma: ");
-			path = entry.nextLine();
+			String path= entry.nextLine();
 			event.archivoParticipantes(path);
 				break;
 			case 2:
-//			
 			System.out.println("Porfavor digite el identificador de el inscrito que desea buscar: ");
 			String id = entry.nextLine();
 			event.searchInscried(id);
-//			System.out.println("nombre del dueño: ");
-//			name = entry.nextLine();
-//			System.out.println("apellido: ");
-//			lastName = entry.nextLine();
-//			System.out.println("fecha de nacimiento: ");
-//			date = entry.nextLine();
-//			System.out.println("tipo de mascota favorita: ");
-//			typePetsFavorate = entry.nextLine();
-//			Owner o = new Owner(id, name, lastName, date, typePetsFavorate);
-//			clubPets.get(0).addOwner(o);
-////			int id, String name, String lastName, String date, String typePetsFavorate
-//			
 				break;
 			case 3:
-//		
-//			System.out.println("Porfavor digite los datos siguientes: ");
-//			System.out.println("numero de identificacion: ");
-//			id = entry.nextInt();
-//			System.out.println("nombre del la mascota: ");
-//			name = entry.nextLine();
-//			System.out.println("fecha de nacimiento: ");
-//			date = entry.nextLine();
-//			System.out.println("genero: ");
-//			gender = entry.next().charAt(0);
-//		    System.out.println("raza: ");
-//			race = entry.nextLine();
-//			Pet u = new Pet(id, name, date, gender, race);
-//			if(clubPets.get(0).owner.get(0).addPet(u,name) == true) {
-//				System.out.println("Se pudo agregar la mascota correctamente");
-//			} else {
-//				System.out.println("No se pudo agregar la mascota correctamente");
-//			}
-////			int id, String name, String date, char gender, String race
-//			
+			System.out.println("Porfavor digite el identificador del asistente al evento: ");
+			String ide = entry.nextLine();
+			event.searchAtt(ide);
 				break;
 			case 4:
-//			
-//			System.out.println("digite por favor el nombre del club que desea eliminar: ");
-//			name = entry.nextLine();
-//			removeClub(name);
-//			
+			System.out.println("digite el pais que desea buscar:");
+			String country = entry.nextLine();
+			System.out.println("digite por favor en que estructura desea imprimir: ");
+			System.out.println("1.en ArbolABB");
+			System.out.println("2.en lista doeblemente enlazada");
+			String n = entry.nextLine();
+			int a = Integer.parseInt(n);
+				if(a == 1) {
+					event.printTree(country);
+				}else if (a == 2){
+					event.printList(country);
+				} else {
+					System.out.println("digite porfavor entre 1 y 2");
+				}
+
 				break;
-			case 5:
-//			
-//			System.out.println("digite por favor el nombre del dueño que desea eliminar: ");
-//			name = entry.nextLine();
-////			removeOwner(name);
-//			
+			case 5:	
+			System.out.println("chao :'(");
+			oe = true;
 				break;
+			}
 		}
 	}
 	public static void showMenu() {

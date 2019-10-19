@@ -16,11 +16,11 @@ public class Event {
 
 //	public static void main(String[] args) {
 //		Event m = new Event("camilo");			//C:\Users\Camilo Escobar A\Documents\VolleyballCup\data
-//		m.archivoParticipantes("C:\\Users\\Camilo Escobar A\\Documents\\VolleyballCup\\data\\ExportCSV (3).csv");
+//		m.archivoParticipantes("C:\\Users\\Camilo Escobar A\\Documents\\VolleyballCup\\data\\ExportCSVs.csv");
 //		System.out.println("R");
-////		System.out.println(m.printTree("Chile"));
-////		System.out.println(m.printTree("Peru"));
-////		System.out.println(m.printTree("Nauru"));
+//		System.out.println(m.printTree("Chile"));
+//		System.out.println(m.printTree("Peru"));
+//		System.out.println(m.printTree("Nauru"));
 //	}
 
 	public String archivoParticipantes(String path) {

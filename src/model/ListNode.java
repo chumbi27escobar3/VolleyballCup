@@ -8,7 +8,6 @@ public class ListNode {
 	private Participant participant;
 	
 	public ListNode(Participant participant) {
-		super();
 		this.participant = participant;
 	}
 
