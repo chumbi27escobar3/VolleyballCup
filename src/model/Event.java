@@ -18,9 +18,11 @@ public class Event {
 //		Event m = new Event("camilo");			//C:\Users\Camilo Escobar A\Documents\VolleyballCup\data
 //		m.archivoParticipantes("C:\\Users\\Camilo Escobar A\\Documents\\VolleyballCup\\data\\ExportCSVs.csv");
 //		System.out.println("R");
-//		System.out.println(m.printTree("Chile"));
+//		System.out.println(m.searchAtt("1"));
+//		System.out.println(m.searchInscried("56"));
+//		System.out.println(m.printList("Peru"));
 //		System.out.println(m.printTree("Peru"));
-//		System.out.println(m.printTree("Nauru"));
+//	
 //	}
 
 	public String archivoParticipantes(String path) {
